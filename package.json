@@ -1,0 +1,26 @@
+{
+  "name": "simple-keycloak",
+  "version": "1.0.0",
+  "build": 3,
+  "description": "Simple Keycloak Application",
+  "keywords": [
+    "Keycloak"
+  ],
+  "repository": "SmartBlug/simple-keycloak",
+  "bugs": "https://github.com/SmartBlug/simple-keycloak/issues",
+  "main": "app.js",
+  "scripts": {
+    "start": "NODE_ENV=production node app.js",
+    "kc": "NODE_ENV=keycloak node app.js"
+  },
+  "author": "Patrick Bouffel <patrick@bouffel.com>",
+  "contributors": [],
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "fs-promise": "^2.0.3",
+    "keycloak-connect": "^11.0.0",
+    "morgan": "^1.10.0"
+  }
+}

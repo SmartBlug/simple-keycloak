@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Simple Keycloak</title>
+  <link href="/assets/favicon.ico" rel="icon" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <link href="/assets/styles.css" rel="stylesheet">
+  <script src="/app/keycloak.js"></script>
+</head>
+
+<body>
+  <pre id="token"></pre>
+  <script>    
+    var kc = new Keycloak('/keycloak.json');
+    kc.init({
+      onLoad: 'check-sso',
+      silentCheckSsoRedirectUri: window.location.origin + '/app/silent-check-sso.html'
+    })
+    .then(function(authenticated) {
+      alert(authenticated ? 'authenticated' : 'not authenticated');
+      if (!authenticated) {
+        kc.login();
+      }
+      else {
+        fetch("/token", {
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            authorization: 'Bearer ' + kc.token
+          }
+        })
+        .then(res => res.json())
+        .then(function(me){
+          console.log(me);
+          document.getElementById('token').innerHTML = JSON.stringify(me, null, 2);;
+        });
+      }
+    }).catch(function() {
+      alert('failed to initialize');
+    });
+  </script>
+</body>
+
+</html>
