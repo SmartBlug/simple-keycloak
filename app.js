@@ -55,13 +55,8 @@ let server;
 if(config.port) {
   // HTTP Server
   server = app.listen(config.port, config.iface, () => {
-<<<<<<< HEAD
     console.log(Package.name,Package.version,'build',Package.build,`listening on http://${config.iface}:${config.port}`);
     if (config.keycloak.front) console.log(`Keycloak activated on ${config.keycloak.back["auth-server-url"]}realms/${config.keycloak.back["realm"]}`);
-=======
-    console.log(Package.name,`listening on http://${config.iface}:${config.port}`);
-    if (config.keycloak.front) console.log(`Keycloak activated`);
->>>>>>> f1084670d02ba1f09eb9e60bbd2ef5c114e21163
   });
 }
 
@@ -74,13 +69,8 @@ if(config.sslPort && config.sslKeyFile && config.sslCertFile) {
   };
   httpsServer = https.createServer(sslOpts, app)
     .listen(config.sslPort, config.iface, () => {
-<<<<<<< HEAD
       console.log(Package.name,Package.version,'build',Package.build,`listening on https://${config.iface}:${config.sslPort}`);
       if (config.keycloak.front) console.log(`Keycloak activated on ${config.keycloak.back["auth-server-url"]}realms/${config.keycloak.back["realm"]}`);
-=======
-      console.log(Package.name,`listening on https://${config.iface}:${config.sslPort}`);
-      if (config.keycloak.front) console.log(`Keycloak activated`);
->>>>>>> f1084670d02ba1f09eb9e60bbd2ef5c114e21163
     });
 }
 

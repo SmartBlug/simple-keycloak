@@ -4,11 +4,12 @@ LABEL MAINTAINER = 'Patrick Bouffel <patrick@bouffel.com>'
 
 WORKDIR /app
 
-ADD *.js package.json package-lock.json README.md /app/
 ADD public /app/public
+ADD *.js package.json README.md /app/
 
 # Rebuild the frontend apps
 RUN cd /app && \
+    npm install && \
     npm ci
 
 EXPOSE 3000
