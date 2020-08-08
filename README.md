@@ -2,7 +2,7 @@
 
 [![Current Release](https://img.shields.io/github/release/SmartBlug/simple-keycloak.svg)](https://github.com/SmartBlug/simple-keycloak/releases)
 [![Known Vulnerabilities](https://snyk.io/test/github/SmartBlug/simple-keycloak/badge.svg)](https://snyk.io/test/github/SmartBlug/simple-keycloak)
-[![Docker Automated buil](https://img.shields.io/docker/automated/SmartBlug/simple-keycloak.svg)](https://hub.docker.com/r/smartblug/simple-keycloak)
+[![Docker Automated buil](https://img.shields.io/docker/automated/smartblug/simple-keycloak.svg)](https://hub.docker.com/r/smartblug/simple-keycloak)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Patrick%40Bouffel.com&item_name=simple-keycloak&currency_code=EUR&source=url)
 
 Simple Keycloak Application to connect with your keycloak server and retrieve your token
