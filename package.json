@@ -1,7 +1,7 @@
 {
   "name": "simple-keycloak",
   "version": "1.0.1",
-  "build": 10,
+  "build": 12,
   "description": "Simple Keycloak Application",
   "keywords": [
     "Keycloak"
