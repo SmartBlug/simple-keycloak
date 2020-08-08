@@ -1,10 +1,6 @@
 temp
 node_modules
 npm-debug.log
-<<<<<<< HEAD
 package-lock.json
 config.keycloak.js
 docker.params
-=======
-config.keycloak.js
->>>>>>> f1084670d02ba1f09eb9e60bbd2ef5c114e21163
